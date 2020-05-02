@@ -5,6 +5,7 @@ const express = require("express"),
   session = require("express-session"),
   authCtrl = require("./controllers/authController"),
   mainCtrl = require("./controllers/mainController"),
+  mailCtrl = require("./controllers/mailController"),
   { SERVER_PORT, CONNECTION_STRING, SESSION_SECRET } = process.env,
   port = SERVER_PORT,
   app = express();
@@ -39,5 +40,8 @@ app.post('/api/cart-item', mainCtrl.addToCart);
 app.get(`/api/cart/:id`, mainCtrl.getCart);
 app.delete('/api/cart-item/:id', mainCtrl.deleteCartItem);
 app.post('/api/payment', mainCtrl.completePurchase);
+
+//Nodemailer endpoint
+app.post('/api/email', mailCtrl.email);
 
 app.listen(port, () => console.log(`Server running on port ${port}`));

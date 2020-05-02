@@ -1,55 +1,99 @@
 $myColor: rgb(0,0,51);
 
-.nav-links {
-    color: $myColor;
-}
 
-.header-link {
-    color: $myColor;
-    // font-family: "Goudy Old Style", serif;
-}
 
 .header-container {
     height: 150px;
-    /* background-color: rgba(0, 0, 51); */
     border-bottom: 1px solid rgb(0, 0, 51);
     // color:rgb(0, 0, 51);
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
     align-items: center;
-    box-sizing: border-box;
-    padding: 0px 30px;
-    background-repeat: no-repeat;
-    width: auto;
-
+    // text-decoration: none;
+    justify-content: space-evenly;
 }
 
 .header-link {
     margin: 0px;
-    // color: rgb(0, 0, 51);
+    color: rgb(0, 0, 51);
     font-family: "Goudy Old Style", serif;
     text-decoration: none;
     font-size: 50px;
 }
 
-.header-container nav {
-    width: 225px;
+.dropdown-menu {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 150px;
+    background-color:white;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    // align-items: right;
+    // justify-content: space-evenly;
+    border-top: 1px solid rgb(0,0,51);
+    .drop-links {
+        color: $myColor;
+        font-family: "Goudy Old Style", serif;
+        text-decoration: none;
+    }
 }
 
-.nav-links {
-    // color: rgb(0, 0, 51);
+
+.desktop-links {
     font-size: 24px;
-    text-decoration: none;
-    font-family: "Goudy Old Style", serif;
+    align-items: center;
+    display: none;
+    .nav-links{
+        color: $myColor;
+        font-family: "Goudy Old Style", serif;
+        text-decoration: none;
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: space-evenly;
+        
+    }
 }
 
-@media (min-width: 500px) {
-    .header-container {
-      flex-direction: row;
-    }
-    body {
-      background: whitesmoke;
-    }
+.dropdown-button {
+    color: rgb(0,0,51);
+    font-size: 28px;
+}
+
+
+
+// .header-container nav {
+//     width: 225px;
+//     display: flex;
+//     justify-content: space-evenly;
+// }
+
+// .nav-links {
+//     color: rgb(0, 0, 51);
+//     font-size: 24px;
+//     text-decoration: none;
+//     font-family: "Goudy Old Style", serif;
+// }
+
+// @media (min-width: 500px) {
+//     .header-container {
+//     flex-direction: column;
+//     text-decoration: none;
+//     }
+//   }
+
+  @media (min-width: 1000px) {
+      .dropdown-button {
+          display: none;
+      }
+
+      .dropdown-menu {
+          display: none;
+      }
+
+      .desktop-links {
+          width: 35%;
+          display: flex;
+          justify-content: space-around;
+      }
   }

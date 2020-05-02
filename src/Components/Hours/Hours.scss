@@ -1,0 +1,15 @@
+@import '../../variables';
+
+.hours-container {
+    // height: 100px;
+    background-color: $primary-header-color;
+    @include flex-container;
+    justify-content: space-evenly;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: $primary-header-color;
+    border: 1px solid black;
+}

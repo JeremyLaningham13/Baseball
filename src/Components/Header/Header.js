@@ -1,31 +1,56 @@
-import React from "react";
+import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
 import "./Header.scss";
 
-const Header = (props) => {
-  // console.log(props)
+// const Header = (props) => {
+  class Header extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      dropdownView: false
+    }
+  }
+
+  handleToggle = () => {
+    this.setState({dropdownView: !this.state.dropdownView})
+  }
+ 
+  render(){
   return (
     <div className="header-container">
-      <h1 className="header-logo">
+      <h1>
         <Link to="/" className="header-link">
           On Deck Baseball
         </Link>
       </h1>
-
-      {/* <Link to='/' className='nav-links'>Home</Link> */}
-      <Link to="/hours" className="nav-links">Hours</Link>
-      <Link to="/offer" className="nav-links">What We Offer</Link>
-      <Link to="/appointment" className="nav-links">Lessons & Cage Rentals</Link>
-      {/* <Link to="/account" className="nav-links">Account</Link> */}
-      <Link to="/cart" className="nav-links">
+      <div className='dropdown-button' onClick={this.handleToggle}>☰</div>
+      {this.state.dropdownView
+      ? (<nav className='dropdown-menu'>
+          <span><Link to="/hours" className='drop-links'>Hours</Link></span>
+          <span><Link to="/offer" className='drop-links'>What We Offer</Link></span>
+          <span><Link to="/appointment" className='drop-links'>Lessons & Cage  Rentals</Link></span>
+          <span><Link to="/cart" className='drop-links'>Cart
+            {/* <img src="https://img.icons8.com/ios/30/000000/shopping-cart.png"/> */}
+            </Link></span>
+          <span><Link to="/login" className='drop-links'>Login
+            {/* <img src="https://img.icons8.com/ios/32/000000/baseball-player.png"/> */}
+            </Link></span>
+      </nav>)
+      : null}
+    <nav className="desktop-links">
+      <span><Link to="/hours" className="nav-links">Hours</Link></span>
+      <span><Link to="/offer" className="nav-links">What We Offer</Link></span>
+      <span><Link to="/appointment" className="nav-links">Lessons & Cage Rentals</Link></span>
+      <span><Link to="/cart" className="nav-links">
       <img src="https://img.icons8.com/ios/30/000000/shopping-cart.png"/>
-      </Link>
-      <Link to="/login" className="nav-links">
+      </Link></span>
+      <span><Link to="/login" className="nav-links">
       <img src="https://img.icons8.com/ios/32/000000/baseball-player.png"/>
-      </Link>
-      {/* <Link to="/logout" className="nav-links">Log out</Link> */}
+      </Link></span>
+    </nav>
     </div>
   );
 };
+}
 
 export default withRouter(Header);

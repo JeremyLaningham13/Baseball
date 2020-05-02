@@ -1,0 +1,8 @@
+$primary-header-color: blue;
+$primary-body-color: red;
+
+@mixin flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
