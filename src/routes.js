@@ -8,6 +8,7 @@ import Hours from './Components/Hours/Hours';
 import Login from './Components/Login/Login';
 import Logout from './Components/Logout/Logout';
 import Offer from './Components/WhatWeOffer/WhatWeOffer';
+import Lessons from './Components/Lessons/Lessons';
 
 export default (
     <Switch>
@@ -19,5 +20,6 @@ export default (
         <Route path='/hours' component={Hours} />
         <Route path='/login' component={Account, Login} />
         <Route path='/logout' component={Logout} />
+        <Route path='/lessons' component={Lessons} />
     </Switch>
 )

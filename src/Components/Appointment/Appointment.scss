@@ -1,0 +1,13 @@
+@import '../../variables';
+
+.products-container {
+    height: 100vh;
+    background-color: $primary-header-color;
+    font-family: $primary-font-family;
+    @include flex-container;
+    background: url(https://cpe-prod.usabaseball.com/assets/images/3/7/6/312591376/cuts/1580x890/cut.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:  top center;
+    background-size: cover;
+}

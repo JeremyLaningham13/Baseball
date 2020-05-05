@@ -1,0 +1,25 @@
+@import '../../variables';
+
+.lessons-container {
+    height: 100vh;
+    background-color: $primary-header-color;
+    font-family: $primary-font-family;
+    @include flex-container;
+    // background: url(https://cpe-prod.usabaseball.com/assets/images/3/7/6/312591376/cuts/1580x890/cut.jpg);
+    background: url(https://api.hub.jhu.edu/factory/sites/default/files/styles/landscape/public/baseball_3.jpg?itok=CIlkjN9z);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+.lesson-link {
+    font-family: $primary-font-family;
+    text-decoration: none;
+    color: $secondary-font-color;
+    font-style: italic;
+}
+
+.lessons-info {
+
+}

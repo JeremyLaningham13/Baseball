@@ -52,7 +52,7 @@ module.exports = {
             if(err){
                 return res.sendStatus(500);
             }
-            res.sendStatus(200);
+            // res.sendStatus(200);
         })
 
         db.cart.complete_purchase(id);

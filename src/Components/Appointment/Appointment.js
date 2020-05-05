@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./Appointment.scss";
 import axios from 'axios';
 import {connect} from 'react-redux';
 
@@ -36,9 +37,9 @@ class Appointment extends Component {
            </div>
        ))
         return (
-            <div className='products'>
+            <div className='products-container'>
                 <h1>Lessons & Cage Rentals</h1>
-                <p>We have Baseball and Softball  machines.  You can  rent an empty cage for Pitching, Team practice or Tee Work.  Come enjoy our team friendly environment and get all the benefits of an Indoor facility.</p>
+                <p>We have Baseball and Softball  machines. You can  rent an empty cage for Pitching, Team practice or Tee Work.  Come enjoy our team friendly environment and get all the benefits of an Indoor facility.</p>
                 {mappedProducts}
             </div>
         )

@@ -1,8 +1,14 @@
-$primary-header-color: blue;
+$primary-header-color: rgb(0, 0, 51);
 $primary-body-color: red;
+$primary-font-family: "Goudy Old Style", serif;
+$primary-font-color: rgb(0, 0, 51);
+$secondary-font-color: rgb(255, 255, 255);
 
 @mixin flex-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    color: $secondary-font-color;
+    font-weight: bolder;
 }
