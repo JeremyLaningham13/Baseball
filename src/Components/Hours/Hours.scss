@@ -1,8 +1,18 @@
 @import '../../variables';
 
 .hours-container {
-    height: 100vh;
-    background-color: $primary-header-color;
+    height: 90vh;
+    
+    background: url(https://www.popsci.com/resizer/k05qD4piOHTgnytgDEhLkRydg7k=/1200x628/smart/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/5FKPNX6FZZDOFIGLJORGQUBI7Q.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom center;
+    background-size: cover;
     font-family: $primary-font-family;
     @include flex-container;
+}
+
+.hours-text{
+    position: relative;
+    bottom: 30%;
 }

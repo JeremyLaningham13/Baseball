@@ -3,6 +3,7 @@ import axios from 'axios';
 import {connect} from 'react-redux';
 import {clearUser} from '../../redux/reducer';
 import { withRouter } from 'react-router-dom';
+import './Logout.scss';
 
 export class Logout extends Component {
     constructor(props){
@@ -30,9 +31,8 @@ export class Logout extends Component {
 
     render() {
         return (
-            <div className='logout'>
-            
-                <button onClick={this.handleLogout}>Logout</button>
+            <div className='logout-container'>
+                <button className='logout-button' onClick={this.handleLogout}>Logout</button>
             </div>
         )
     }

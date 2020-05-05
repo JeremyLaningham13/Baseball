@@ -1,25 +1,64 @@
 @import '../../variables';
 
 .lessons-container {
-    height: 100vh;
-    background-color: $primary-header-color;
-    font-family: $primary-font-family;
     @include flex-container;
-    // background: url(https://cpe-prod.usabaseball.com/assets/images/3/7/6/312591376/cuts/1580x890/cut.jpg);
-    background: url(https://api.hub.jhu.edu/factory/sites/default/files/styles/landscape/public/baseball_3.jpg?itok=CIlkjN9z);
+    height: 100vh;
+    width: 100%;
+    background: url(https://images.unsplash.com/photo-1463253897230-4e281bf226c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&w=1000&q=80);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
 }
 
+.lesson-about {
+    color: $secondary-font-color;
+    font-size: 20px;
+    width: 100vw;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.lesson-title{
+    font-size: 20px;
+    color: whitesmoke;
+    .list {
+        font-size: 18px;
+        color: lightgray;
+    }
+}
+
+.lesson-info {
+   display: flex;
+   justify-content: center;
+}
+
 .lesson-link {
-    font-family: $primary-font-family;
     text-decoration: none;
     color: $secondary-font-color;
     font-style: italic;
 }
 
-.lessons-info {
+.pitching-lessons {
+    text-align: left;
+    display: block;
+    position: relative;
+    float: left;
+    width: 25%;
+}
 
+.batting-lessons {
+    text-align: left;
+    display: block;
+    position: relative;
+    float: right;
+    width: 25%;
+}
+
+.catching-lessons {
+    text-align: left;
+    display: block;
+    position: relative;
+    // float: right;
+    width: 25%;
 }

@@ -1,14 +1,41 @@
 $primary-header-color: rgb(0, 0, 51);
-$primary-body-color: red;
 $primary-font-family: "Goudy Old Style", serif;
 $primary-font-color: rgb(0, 0, 51);
 $secondary-font-color: rgb(255, 255, 255);
+$primary-button-radius: 8px;
 
 @mixin flex-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: $primary-font-family;
     color: $secondary-font-color;
     font-weight: bolder;
+}
+
+@mixin button {
+    border-radius: 8px;
+    border-color: whitesmoke;
+    background-color: $primary-header-color;
+    color: $secondary-font-color;
+    width: auto;
+    height: 25px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+@mixin cart {
+    border-radius: 8px;
+    border-color: whitesmoke;
+    background-color: $primary-header-color;
+    color: $secondary-font-color;
+    width: 500px;
+    height: 25px;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+   white-space: normal;
+    margin-top: 10%;
 }

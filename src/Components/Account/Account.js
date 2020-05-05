@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Account.scss';
 import axios from 'axios';
 import {connect} from 'react-redux';
 import {clearUser} from '../../redux/reducer';
@@ -10,6 +11,7 @@ class Account extends Component {
         super(props);
         this.state = {
             user: '',
+            email: '',
             editView: false
         }
     }
@@ -18,6 +20,14 @@ class Account extends Component {
         if(!this.props.user.email){
             this.props.history.push('/')
         }
+    }
+
+    handleInput = (val) => {
+        this.setState({email: val})
+    }
+
+    handleEditView = () => {
+        this.setState({editView: !this.state.editView})
     }
 
     handleLogout = () => {
@@ -29,14 +39,34 @@ class Account extends Component {
         .catch(err => console.log(err))
     }
 
+    updateUseremail = () => {
+        const {email} = this.state;
+        axios.put(`/api/customer/${this.props.user.customer_id}`, {email})
+        .then(res => {
+            this.props.getUser(res.data[0]);
+            this.handleEditView();
+            this.setState({email: ''});
+        })
+        .catch(err => console.log(err));
+    }
+
     render() {
         return (
             <div className='account'>
                 <h1>My Account</h1>
-                <button onClick={this.handleLogout}>Logout</button>
+                <button className='logout-button' onClick={this.handleLogout}>Logout</button>
                 <h1>Account Details</h1>
                 <h3>{this.props.user.firstname} {this.props.user.lastname}</h3>
-                <h4>{this.props.user.email}</h4>
+                {/* <h4>{this.props.user.email}</h4> */}
+                {!this.state.editView
+                ? <h2>{this.props.user.email} <button id='edit-button' onClick={this.handleEditView}>Edit</button></h2>
+                : (<div>
+                    <input 
+                        value={this.state.email}
+                        placeholder='New Email'
+                        onChange={(e) => this.handleInput(e.target.value)}/>
+                    <button id='edit-button' onClick={this.updateUseremail}>Submit</button>
+                   </div>)}
                 
             </div>
         )

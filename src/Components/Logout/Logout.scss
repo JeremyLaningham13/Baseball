@@ -1,0 +1,5 @@
+@import '../../variables';
+
+.logout-button {
+    @include button;
+}

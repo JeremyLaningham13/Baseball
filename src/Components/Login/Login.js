@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-// import './Login.css';
+import './Login.scss';
 import axios from 'axios';
 import {connect} from 'react-redux';
-
 import {getUser} from '../../redux/reducer';
 
 class Login extends Component {

@@ -30,17 +30,18 @@ class Appointment extends Component {
     render() {
        const mappedProducts = this.state.products.map((product, i) => (
            <div key={i}>
-               <p>{product.name}</p>
-               <p>{product.description}</p>
-               <p>${product.price}</p>
-               <button onClick={() => this.addToCart(product.product_id, product.price)}>Add to Cart</button>
+               
+               {/* <p>{product.name}</p> */}
+               {/* <p>{product.description} - ${product.price} </p> */}
+               {/* <p>${product.price}</p> */}
+               <button className='cart-button' onClick={() => this.addToCart(product.product_id, product.price)}>{product.description} ${product.price}</button>
            </div>
        ))
         return (
             <div className='products-container'>
-                <h1>Lessons & Cage Rentals</h1>
-                <p>We have Baseball and Softball  machines. You can  rent an empty cage for Pitching, Team practice or Tee Work.  Come enjoy our team friendly environment and get all the benefits of an Indoor facility.</p>
-                {mappedProducts}
+                <h1 className='products-text'>Lessons & Cage Rentals</h1>
+                <p className='products-text'>We have Baseball and Softball  machines. You can  rent an empty cage for Pitching, Team practice or Tee Work.  Come enjoy our team friendly environment and get all the benefits of an Indoor facility.</p>
+                <a className='products-text'>{mappedProducts}</a>
             </div>
         )
     }

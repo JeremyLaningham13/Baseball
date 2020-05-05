@@ -1,12 +1,12 @@
 @import '../../variables';
 
 .offer-container {
-    height: 100vh;
+    height: 90vh;
     background-color: $primary-header-color;
     font-family: $primary-font-family;
     @include flex-container;
-    // background: url(https://cpe-prod.usabaseball.com/assets/images/3/7/6/312591376/cuts/1580x890/cut.jpg);
-    background: url(https://sentrysportslighting.com/wp-content/uploads/2016/05/bigstock-Panorama-Of-Empty-Baseball-Fie-103964969.jpg);
+    // background: url(https://sentrysportslighting.com/wp-content/uploads/2016/05/bigstock-Panorama-Of-Empty-Baseball-Fie-103964969.jpg);
+    background: url(https://siplay-website-content-user.s3.amazonaws.com/Portal/6127/Content/Baseball-in-Grass.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -14,8 +14,12 @@
 }
 
 .lesson-link {
-    font-family: $primary-font-family;
     text-decoration: none;
     color: $secondary-font-color;
     font-style: italic;
+}
+
+.offer-text {
+    position: relative;
+    bottom: 17%;
 }

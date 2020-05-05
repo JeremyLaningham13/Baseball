@@ -44,4 +44,7 @@ app.post('/api/payment', mainCtrl.completePurchase);
 //Nodemailer endpoint
 app.post('/api/email', mailCtrl.email);
 
+//User endpoint
+app.put('/api/customer/:id', mainCtrl.updateUseremail);
+
 app.listen(port, () => console.log(`Server running on port ${port}`));
