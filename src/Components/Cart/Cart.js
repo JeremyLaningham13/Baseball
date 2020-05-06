@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Cart.scss";
 import { connect } from "react-redux";
 import axios from "axios";
 // import Stripe_payment from '../Stripe/Stripe_payment';
@@ -44,25 +45,28 @@ class Cart extends Component {
 
   render() {
     const mappedCart = this.state.cart.map((item, i) => {
-      return (
-        <div key={i} className="product-container">
-          <p>{item.name}</p>
+    return (
+      <div key={i}>
+          {/* <p>{item.name}</p> */}
           <p>{item.description}</p>
           <p>${item.price}</p>
-          <button onClick={() => this.deleteCartItem(item.cart_item_id)}>
-            Remove Item
-          </button> <br/>
-        <StripeCheckout
-          label="Checkout"
-          token={this.onToken}
-          stripeKey={stripe.publicKey}
-          amount={Math.round(item.price * 100)} />
+          <button className="remove-button" onClick={() => this.deleteCartItem(item.cart_item_id)}>Remove Item</button>{" "}
+          <br />
+          <StripeCheckout
+            label="Checkout"
+            token={this.onToken}
+            stripeKey={stripe.publicKey}
+            amount={item.price * 100}
+          />
         </div>
       );
     });
+    
+
+    
     return (
-      <div>
-        <h1>Cart</h1>
+      <div className='logout-container'>
+        <h1 className='cart-logout' >Cart</h1>
         {mappedCart}
       </div>
     );

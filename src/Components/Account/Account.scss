@@ -3,3 +3,42 @@
 .logout-button {
     @include button;
 }
+
+.account-container {
+    height: 100vh;
+    @include flex-container;
+    background: url(https://www.monaco-chicago.com/images/1700-960/baseball-grass-1e983004.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    // position: relative;
+    // bottom: 80%;
+}
+
+.account-text {
+    position: relative;
+    bottom: 30%
+}
+
+.logout-button {
+    @include button;
+}
+
+.edit-button {
+    @include button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 42%;
+    margin-top: 10px;
+}
+
+.submit-button {
+    @include button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 36%;
+    margin-top: 10px;
+}

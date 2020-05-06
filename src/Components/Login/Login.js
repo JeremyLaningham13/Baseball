@@ -63,24 +63,24 @@ class Login extends Component {
                     {this.state.registerView
                     ? (<>
                        <h3>Create account</h3>
-                       <input
+                       <input className='auth-container'
                             value={this.state.firstname}
                             name='firstname'
                             placeholder='First Name'
                             onChange={(e) => this.handleInput(e)}/>
-                        <input
+                        <input className='auth-container'
                             value={this.state.lastname}
                             name='lastname'
                             placeholder='Last Name'
                             onChange={(e) => this.handleInput(e)}/>
                         </>)
                     : <h3></h3>}
-                    <input
+                    <input className='auth-container'
                         value={this.state.email}
                         name='email'
                         placeholder='Email'
                         onChange={(e) => this.handleInput(e)}/>
-                    <input
+                    <input className='auth-container'
                         type='password'
                         value={this.state.password}
                         name='password'
@@ -88,17 +88,17 @@ class Login extends Component {
                         onChange={(e) => this.handleInput(e)}/>  
                     {this.state.registerView
                     ? ( <>
-                    <input
+                    <input className='auth-container'
                             type='password'
                             value={this.state.verPassword}
                             name='verPassword'
                             placeholder='Verify Password'
                             onChange={(e) => this.handleInput(e)}/>
-                        <button onClick={this.handleRegister}>Register</button>
+                        <button className='register-button' onClick={this.handleRegister}>Register</button>
                         <p>Have an account? <span onClick={this.handleToggle}>Login Here</span></p> 
                         </>)
                     : (<>
-                        <button className='login-button' onClick={()=>this.handleLogin()}>Login</button>
+                        <button className='log-button' onClick={()=>this.handleLogin()}>Login</button>
                         <p>Don't have an account? <span className='create-account' onClick={this.handleToggle}>Create One</span></p>
                         </>)}      
                 </section>

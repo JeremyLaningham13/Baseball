@@ -2,14 +2,34 @@
     text-align: center;
   }
 
-// @media (max-width: 900px) {
-//     body {
-//         background: turquoise;
-//     }
-// }
-
-// @media (min-width: 700px) {
+// @media (min-width: 999px) {
 //     body {
 //         background: tomato;
 //     }
+// }
+
+// @media (min-width: 1000px) {
+//   .dropdown-button {
+//       display: none;
+//   }
+
+//   .dropdown-menu {
+//       display: none;
+//   }
+
+//   .desktop-links {
+//       width: 40%;
+//       display: flex;
+//       justify-content: space-around;
+//   }
+
+//   .lesson-container {
+//     .lessons-container {
+//       //   flex-basis: 50px;
+//       //   justify-content: space-between;
+//       float: none;
+//       width: 100%;
+//       color: red;
+//       }
+// }
 // }

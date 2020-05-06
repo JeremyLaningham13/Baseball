@@ -28,8 +28,8 @@ import "./Header.scss";
           <span><Link to="/offer" className='drop-links'>What We Offer</Link></span>
           <span><Link to="/appointment" className='drop-links'>Lessons & Cage  Rentals</Link></span>
           <span><Link to="/lessons" className="drop-links">Lessons Information</Link></span>
-          <span><Link to="/cart" className='drop-links'>Cart</Link></span>
           <span><Link to="/login" className='drop-links'>Login</Link></span>
+          <span><Link to="/cart" className='drop-links'>Cart</Link></span>
       </nav>)
       : null}
     <nav className="desktop-links">
@@ -46,8 +46,8 @@ import "./Header.scss";
       {/* <span><Link to="/offer" className="nav-links">What We Offer</Link></span> */}
       {/* <span><Link to="/lessons" className="nav-links">Lessons Information</Link></span> */}
       <span><Link to="/appointment" className="nav-links">Lessons & Cage Rentals</Link></span>
-      <span><Link to="/cart" className="nav-links"><img src="https://img.icons8.com/ios/30/000000/shopping-cart.png"/></Link></span>
       <span><Link to="/login" className="nav-links"><img src="https://img.icons8.com/ios/32/000000/baseball-player.png"/></Link></span>
+      <span><Link to="/cart" className="nav-links"><img src="https://img.icons8.com/ios/30/000000/shopping-cart.png"/></Link></span>
     </nav>
     </div>
   );

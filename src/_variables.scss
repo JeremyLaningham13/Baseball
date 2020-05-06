@@ -14,9 +14,21 @@ $primary-button-radius: 8px;
     font-weight: bolder;
 }
 
+@mixin cart-container {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: $primary-font-family;
+    color: $secondary-font-color;
+    font-weight: bolder;
+    position: relative;
+    bottom: 80%;
+}
+
 @mixin button {
     border-radius: 8px;
-    border-color: whitesmoke;
+    border-color: $primary-font-color;
     background-color: $primary-header-color;
     color: $secondary-font-color;
     width: auto;
@@ -27,15 +39,15 @@ $primary-button-radius: 8px;
 
 @mixin cart {
     border-radius: 8px;
-    border-color: whitesmoke;
-    background-color: $primary-header-color;
-    color: $secondary-font-color;
-    width: 500px;
+    border-color: $primary-font-color;
+    background-color: $secondary-font-color;
+    color: $primary-font-color;
+    width: auto;
     height: 25px;
     font-size: 13px;
     font-weight: bold;
-    display: flex;
-    justify-content: space-around;
-   white-space: normal;
+    // display: flex;
+    justify-content: space-evenly;
+    // white-space: normal;
     margin-top: 10%;
 }

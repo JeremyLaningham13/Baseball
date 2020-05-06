@@ -1,0 +1,42 @@
+@import '../../variables';
+
+.about-paragraph {
+    // font-family: "Goudy Old Style", serif;;
+    // margin-left: auto;
+    // margin-right: auto;
+    // width: 100vw;
+    // font-size: 23px;
+    // text-align: justify;
+    // text-justify: inter-word;
+    @include flex-container;
+    margin: 0 auto;
+    max-width: 70%;
+    position: relative;
+    // bottom: 24%;
+    font-size: 32px;
+    text-align: center;
+}
+
+.landing-container {
+    height: 90vh;
+    background-color: $primary-header-color;
+    font-family: $primary-font-family;
+    @include flex-container;
+    background: url(https://biglersports.com/wp-content/uploads/2014/02/batting-cage-rentals.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:  top center;
+    background-size: cover;
+}
+
+@media (max-width: 1000px) {
+    .about-paragraph {
+        @include flex-container;
+        margin: 0 auto;
+        max-width: 80%;
+        position: relative;
+        // bottom: 24%;
+        font-size: 32px;
+        text-align: center;
+    }
+}

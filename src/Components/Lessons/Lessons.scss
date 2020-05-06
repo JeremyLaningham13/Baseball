@@ -3,62 +3,114 @@
 .lessons-container {
     @include flex-container;
     height: 100vh;
-    width: 100%;
-    background: url(https://images.unsplash.com/photo-1463253897230-4e281bf226c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&w=1000&q=80);
+    background: url( https://images.unsplash.com/photo-1463253897230-4e281bf226c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&w=1000&q=80 );
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-}
-
-.lesson-about {
-    color: $secondary-font-color;
-    font-size: 20px;
-    width: 100vw;
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-.lesson-title{
-    font-size: 20px;
-    color: whitesmoke;
-    .list {
-        font-size: 18px;
-        color: lightgray;
+    .lessons-text{
+        margin: 0 auto;
+        max-width: 70%;
+        position: relative;
+        bottom: 12%;
     }
+    .lesson-about {
+        color: $secondary-font-color;
+        font-size: 20px;
+        text-align: center;
+    }
+    .lesson-title{
+        font-size: 20px;
+        color: whitesmoke;
+        .list {
+            font-size: 18px;
+            color: lightgray;
+        }
+    }
+    .lesson-info {
+        display: flex;
+        justify-content: center;
+     }
+     
+     .lesson-link {
+         text-decoration: none;
+         color: $secondary-font-color;
+         font-style: italic;
+     }
+     
+     .lessons {
+         text-align: left;
+         display: block;
+         position: relative;
+         float: left;
+         width: 25%;
+     }
 }
 
-.lesson-info {
-   display: flex;
-   justify-content: center;
-}
-
-.lesson-link {
-    text-decoration: none;
-    color: $secondary-font-color;
-    font-style: italic;
-}
-
-.pitching-lessons {
-    text-align: left;
-    display: block;
+@media (max-width: 1000px) {
+    .lessons-container {
+        @include flex-container;
+        height: 100vh;
+        background: url( https://images.unsplash.com/photo-1463253897230-4e281bf226c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&w=1000&q=80 );
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        background-size: cover;
+        padding-bottom: 100%;
+    }
+    .lessons-text{
     position: relative;
-    float: left;
-    width: 25%;
-}
-
-.batting-lessons {
-    text-align: left;
-    display: block;
-    position: relative;
-    float: right;
-    width: 25%;
-}
-
-.catching-lessons {
-    text-align: left;
-    display: block;
-    position: relative;
-    // float: right;
-    width: 25%;
+    top: 25%;
+    font-size: 15px;
+    }
+    .lesson-about {
+        position: relative;
+        top: 25%;
+        font-size: 15px;
+    }
+    .details{
+        position: relative;
+        top: 25%;
+        font-size: 15px;
+    }
+    .lesson-title{
+        font-size: 20px;
+        color: whitesmoke;
+        font-size: 15px;
+        .list {
+            font-size: 18px;
+            color: lightgray;
+            position: relative;
+            top: 25%;
+            font-size: 15px;
+        }
+    }
+    .lesson-info {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 25%;
+        font-size: 15px;
+     }
+     
+     .lesson-link {
+         text-decoration: none;
+         color: $secondary-font-color;
+         font-style: italic;
+         position: relative;
+         top: 25%;
+         font-size: 15px;
+     }
+     
+     .lessons {
+         text-align: left;
+         
+         display: block;
+         position: relative;
+         float: left;
+         position: relative;
+         top: 1%;
+         font-size: 100px;
+     }
+        
 }

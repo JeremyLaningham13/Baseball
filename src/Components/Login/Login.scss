@@ -3,3 +3,31 @@
 .login-button {
     @include button;
 }
+
+.login-container {
+    height: 100vh;
+    @include flex-container;
+    background: url(https://www.monaco-chicago.com/images/1700-960/baseball-grass-1e983004.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:  top center;
+    background-size: cover;
+    
+}
+
+.authentication-info {
+    position: relative;
+    bottom: 35%;
+    display: grid;
+    justify-content: space-between;
+    .auth-container {
+        margin-bottom: 10px;
+    }
+}
+        .log-button {
+            @include button
+        }
+
+        .register-button {
+            @include button
+        }

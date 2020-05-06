@@ -52,22 +52,24 @@ class Account extends Component {
 
     render() {
         return (
-            <div className='account'>
+            <div className='account-container'>
+                <span className='account-text'>
+
                 <h1>My Account</h1>
                 <button className='logout-button' onClick={this.handleLogout}>Logout</button>
                 <h1>Account Details</h1>
                 <h3>{this.props.user.firstname} {this.props.user.lastname}</h3>
                 {/* <h4>{this.props.user.email}</h4> */}
                 {!this.state.editView
-                ? <h2>{this.props.user.email} <button id='edit-button' onClick={this.handleEditView}>Edit</button></h2>
+                ? <h2>{this.props.user.email} <button className='edit-button' onClick={this.handleEditView}>Edit</button></h2>
                 : (<div>
                     <input 
                         value={this.state.email}
                         placeholder='New Email'
                         onChange={(e) => this.handleInput(e.target.value)}/>
-                    <button id='edit-button' onClick={this.updateUseremail}>Submit</button>
+                    <button className='submit-button' onClick={this.updateUseremail}>Submit</button>
                    </div>)}
-                
+                </span>
             </div>
         )
     }
