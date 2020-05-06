@@ -10,6 +10,7 @@
     background-size: cover;
     font-family: $primary-font-family;
     @include flex-container;
+    font-size: 18px;
 }
 
 .hours-text{

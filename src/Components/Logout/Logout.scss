@@ -1,5 +1,5 @@
 @import '../../variables';
 
 .logout-button {
-    @include button;
+    @extend .auth-button;
 }

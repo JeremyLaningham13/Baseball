@@ -1,11 +1,12 @@
 require("dotenv").config();
 
 const express = require("express"),
-  massive = require("massive"),
-  session = require("express-session"),
-  authCtrl = require("./controllers/authController"),
-  mainCtrl = require("./controllers/mainController"),
-  mailCtrl = require("./controllers/mailController"),
+      massive = require("massive"),
+      session = require("express-session"),
+      authCtrl = require("./controllers/authController"),
+      mainCtrl = require("./controllers/mainController"),
+      mailCtrl = require("./controllers/mailController"),
+          // path = require('path'),
   { SERVER_PORT, CONNECTION_STRING, SESSION_SECRET } = process.env,
   port = SERVER_PORT,
   app = express();
@@ -28,6 +29,12 @@ massive({
   app.set("db", db);
   console.log("db connected");
 });
+
+// app.use(express.static(__dirname + '/../build'));
+
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../build/index.html'));
+// });
 
 //Auth endpoints
 app.post('/auth/register', authCtrl.register);

@@ -37,6 +37,17 @@ $primary-button-radius: 8px;
     font-weight: bold;
 }
 
+.auth-button {
+    border-radius: 8px;
+    border-color: $primary-font-color;
+    background-color: $primary-header-color;
+    color: $secondary-font-color;
+    width: auto;
+    height: 25px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
 @mixin cart {
     border-radius: 8px;
     border-color: $primary-font-color;

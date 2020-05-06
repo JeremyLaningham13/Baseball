@@ -6,6 +6,7 @@ import store from './redux/store'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+// const Router = process.env.NODE_ENV === 'development' ? HashRouter : BrowserRouter;
 
 ReactDOM.render(
   <Provider store={store}>
